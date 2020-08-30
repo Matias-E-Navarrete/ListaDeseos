@@ -8,24 +8,23 @@ export class CompraItem {
     precioUnitario: number;
     precioTotal: number;
     cantidad: number;
+    completado: boolean;
 
     constructor(descripcion: string, precio?: number, cantidad?: number) {
         this.id = new Date().getTime();
         this.descripcion = descripcion;
-        if (precio != null) {
-            this.precioUnitario = precio;
-        }
         this.fechaCreacion = new Date();
-        if ( cantidad > 0){
+        this.completado = false;
+    }
+    
+    public setPrecio(precio: number, cantidad?: number) {
+        this.precioUnitario = precio;
+        if (cantidad) {
             this.cantidad = cantidad;
-        }else {
+        } else {
             this.cantidad = 1;
         }
-
-    }
-
-    calculaTotal(){
-        this.precioTotal = this.cantidad * this.precioUnitario;
+        return this.precioTotal = cantidad * precio;
     }
 
 }
