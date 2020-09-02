@@ -24,7 +24,7 @@ export class ComprasService {
 
   getLista(id: number | string) {
     id = Number(id);
-    return this.listas.find(listaData => listaData.id === id );
+    return this.listas.find(listaData => listaData.id === id);
   }
 
   guardarStorage() {

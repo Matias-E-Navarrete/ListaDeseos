@@ -2,7 +2,7 @@ import { CompraItem } from './compra-item.model';
 
 
 
-export class ListaCompra{
+export class ListaCompra {
 
     id: number;
     titulo: string;
@@ -12,7 +12,7 @@ export class ListaCompra{
     items: CompraItem[];
 
 
-    constructor( titulo: string ){
+    constructor(titulo: string) {
 
         this.id = new Date().getTime();
         this.titulo = titulo;
@@ -21,4 +21,5 @@ export class ListaCompra{
         this.items = [];
 
     }
+
 }

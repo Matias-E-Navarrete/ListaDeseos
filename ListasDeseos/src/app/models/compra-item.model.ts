@@ -9,6 +9,7 @@ export class CompraItem {
     precioTotal: number;
     cantidad: number;
     completado: boolean;
+    idLista: number;
 
     constructor(descripcion: string, precio?: number, cantidad?: number) {
         this.id = new Date().getTime();
@@ -16,14 +17,8 @@ export class CompraItem {
         this.fechaCreacion = new Date();
         this.completado = false;
     }
-    
-    public setPrecio(precio: number, cantidad?: number) {
+    public setPrecio(precio: number, cantidad: number): number {
         this.precioUnitario = precio;
-        if (cantidad) {
-            this.cantidad = cantidad;
-        } else {
-            this.cantidad = 1;
-        }
         return this.precioTotal = cantidad * precio;
     }
 
