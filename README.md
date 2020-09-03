@@ -2,6 +2,7 @@
 Practica y aprendizaje de Ionic Framework con Angular
 
 # Preview dentro de Lista de Deseos.
+Dentro de Lista Deseos se encuentra la carpeta preview con las capturas de pantalla de la aplicación
 
 
 # Detalles
