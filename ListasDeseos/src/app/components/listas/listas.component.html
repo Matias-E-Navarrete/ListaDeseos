@@ -1,0 +1,22 @@
+<ion-list>
+    <ion-item-sliding *ngFor="let lista of servicioCompras.listas | filtro:terminada; let i = index" class="animated fadeInDown">
+
+        <ion-item detail (click)="agregarItem(lista)">
+            <ion-label> {{ lista.titulo }} </ion-label>
+            <ion-badge class="items-count" color="tertiary">{{ lista.items.length }}
+            </ion-badge>
+        </ion-item>
+
+        <ion-item-options side="end">
+            <ion-item-option (click)="borrarLista( i )" color="danger" expandable>
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-item-option>
+        </ion-item-options>
+
+        <ion-item-options side="start">
+            <ion-item-option (click)=" editarLista( lista )" color="tertiary" expandable>
+                <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+            </ion-item-option>
+        </ion-item-options>
+    </ion-item-sliding>
+</ion-list>
